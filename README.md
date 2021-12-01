@@ -141,3 +141,6 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 ## OpnSense post-install
 - Open your browser and navigate to your OpnSense's IP address
 - Log in using the credentials you provided in the install process. root/password
+
+1. After successfully installing OPNsense and accessing the web interface, there are a few settings to consider modifying. On the “System > Settings > General” page, you may set a “Hostname”, “Domain”, and “Time zone”.
+2. From "Interfaces > WAN" disable "Block private networks" **if** the VM is not public-facing. Default setting for production is left ticked.
