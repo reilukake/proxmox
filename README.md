@@ -1,5 +1,11 @@
 # Proxmox installation
 
+
+## Network diagram
+![image](https://user-images.githubusercontent.com/49016081/144271980-5b42dc06-103e-45eb-8c23-433c6f1ce8d9.png)
+
+
+## Proxmox post-installation
 - Once installed
 - navigate to https://IP:8006
 
@@ -104,3 +110,7 @@ Datacenter->prox->System->Network
 - Subnet mask: 255.255.255.0
 - Default Gateway: 192.168.2.2 - **Proxmox OpnSense IP Address**
 - Primary DNS: 8.8.8.8
+
+## OpnSense post-install
+- Open your browser and navigate to your OpnSense's IP address
+- Log in using the credentials you provided in the install process. root/password
