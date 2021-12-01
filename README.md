@@ -37,6 +37,12 @@ deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription
 deb http://security.debian.org/debian-security bullseye-security main contrib
 ```
 
+### Disable enterprise repositories
+
+```
+$ echo "# deb https://enterprise.proxmox.com/debian/pve bullseye pve-enterprise" > /etc/apt/sources.list.d/pve-enterprise.list
+```
+
 ### Setup dark theme for proxmox
 Veilbyte Discord Dark theme (https://github.com/Weilbyte/PVEDiscordDark)
 
