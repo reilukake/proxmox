@@ -146,8 +146,10 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 2. From "Interfaces > WAN" disable "Block private networks" **if** the VM is not public-facing. Default setting for production is left ticked.
 
 
+## OpnSense preferences
 
-### ToDo
+
+# ToDo
 - IDS/IPS Setup
 - ACL setup
 - Monit settings
