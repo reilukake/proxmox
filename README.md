@@ -146,7 +146,30 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 2. From "Interfaces > WAN" disable "Block private networks" **if** the VM is not public-facing. Default setting for production is left ticked.
 
 
-## OpnSense preferences
+# OpnSense preferences
+
+## IDS/IPS Setup
+1. Navigate to "Services > Intrusion Detection > Administration"
+2. Tick "Enabled"
+3. Tick "IPS mode" if Intrusion Prevention is desired
+4. Tick "Promiscuous mode" if using VLANs and LAN monitoring is needed. This is important in order to capture data on the physical network interface.
+5. Pattern matcher "Hyperscan" for better network performance
+6. Click "Apply"
+IMAGE IPS1
+
+### IF the selected IDS interface is WAN
+- Click on advanced settings
+- Add WAN ip to home networks
+IMAGE IPS1.1
+
+### Download rulesets
+Next we need to download and enable rulesets and policies. The IDS is basically useless before them.
+7. Click on the "Download" tab
+8. Choose and enable your desired rulesets. Remember that more rulesets require more processing power and RAM.
+9. Click on "Download & Update Rules"
+IMAGE IPS2
+
+### Creating a policy
 
 
 # ToDo
