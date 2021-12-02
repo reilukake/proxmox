@@ -129,7 +129,9 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 4. Enter the LAN interface name. It will be the other interface you did not use for the LAN. You will see the note about enabling the firewall/NAT mode once you enter the LAN interface. That is ok.
 5. For the optional interface, just press “Enter”. There are no additional interfaces to set up.
 6. Continue until reboot
-7. ![image](https://user-images.githubusercontent.com/49016081/144276748-c7becf56-4b6c-4dc6-a343-7ceae26d8618.png) The static IP address of the LAN will need to be changed later.
+![image](https://user-images.githubusercontent.com/49016081/144438380-a2abf0ac-a5d7-4ed2-9203-947399298b93.png)
+
+7.  The static IP address of the LAN will need to be changed later.
 8. Log in with the username "_installer_" and password "_opnsense_" to start the installation process.
 9. Continue with desired options. Select GPT/UEFI mode.
 10. Enter a new password for the "_root_" user
@@ -160,7 +162,7 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 ### IF the selected IDS interface is WAN
 - Click on advanced settings
 - Add WAN ip to home networks
-![image](https://user-images.githubusercontent.com/49016081/144437513-3d101258-1566-4929-a990-1d106bff2e01.png)
+![image](https://user-images.githubusercontent.com/49016081/144437984-906e6273-08af-4767-b2b0-daa23ed37d01.png)
 
 ### Download rulesets
 Next we need to download and enable rulesets and policies. The IDS is basically useless before them.
