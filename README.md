@@ -157,6 +157,7 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 4. Tick "Promiscuous mode" if using VLANs and LAN monitoring is needed. This is important in order to capture data on the physical network interface.
 5. Pattern matcher "Hyperscan" for better network performance. Select "**Aho-Corasick**" if the system fails to start up. "Hyperscan" is limited to certain NIC:s like Intel.
 6. Click "Apply"
+
 ![image](https://user-images.githubusercontent.com/49016081/144437476-b69cb924-38e8-4ee0-afc9-a92a21f163f5.png)
 
 ### IF the selected IDS interface is WAN
