@@ -155,25 +155,50 @@ zpool create POOLNAME mirror /dev/sda /dev/sdb
 4. Tick "Promiscuous mode" if using VLANs and LAN monitoring is needed. This is important in order to capture data on the physical network interface.
 5. Pattern matcher "Hyperscan" for better network performance
 6. Click "Apply"
-IMAGE IPS1
+![image](https://user-images.githubusercontent.com/49016081/144437476-b69cb924-38e8-4ee0-afc9-a92a21f163f5.png)
 
 ### IF the selected IDS interface is WAN
 - Click on advanced settings
 - Add WAN ip to home networks
-IMAGE IPS1.1
+![image](https://user-images.githubusercontent.com/49016081/144437513-3d101258-1566-4929-a990-1d106bff2e01.png)
 
 ### Download rulesets
 Next we need to download and enable rulesets and policies. The IDS is basically useless before them.
 7. Click on the "Download" tab
 8. Choose and enable your desired rulesets. Remember that more rulesets require more processing power and RAM.
 9. Click on "Download & Update Rules"
-IMAGE IPS2
+![image](https://user-images.githubusercontent.com/49016081/144437536-a1c7c9af-21f5-4a16-a027-e69d1668392d.png)
 
 ### Creating a policy
+At least one policy must be created for intrusion detection to work properly.
+1. Navigate to "Services > Intrusion Detection > Policy"
+2. Click on the "+" icon on the far right corner to set up a policy
+![image](https://user-images.githubusercontent.com/49016081/144437565-aee98c1d-cd02-4581-ac7e-79d2c1fa8841.png)
+4. Enable required rulesets you wish to enable for the current policy. Simple solution is to enable all.
+![image](https://user-images.githubusercontent.com/49016081/144437585-7e80ac6c-b91c-4546-b16f-b5847978f37d.png)
+5. Define desired actions for this policy. Select "alert" for only alert and not block. Select "Alert, Drop" if you wish to alert and block.
+6. Click "Save" when finished
+
+You will now see your created policy in the "Policies" page. You can manual adjustments to specific rules from the "Rule adjustments" tab. (**OpnSense recommends keeping manual adjustments to a minimum**)
+![image](https://user-images.githubusercontent.com/49016081/144437616-452c9ff0-1783-4514-870b-67f06cb7e71b.png)
+
+### Scheduling ruleset updates
+Now we have enabled the IPS service, downloaded rulesets and enables policies. Now we need to schedule updates to keep the rulesets updated.
+
+1. Navigate to"Services > Intrusion Detection > Administration" and open the "Schedule" tab
+2. Enter the desired frequency for ruleset updates.
+3. Tick "Enabled" and insert "2" Hours. In this example the rulesets will update every night at 02:00.
+![image](https://user-images.githubusercontent.com/49016081/144437672-e4bd97fb-22e7-4aaa-aa5f-2a9168893e2e.png)
+
+**Intrusion detection/prevention configuration is now complete**
+
+### Viewing logs
+
+After some time of running intrusion detection, you may navigate to "Services > Intrusion Detection > Administration" and check the “Alerts” tab to see the activity that is occurring on your network.
+
 
 
 # ToDo
-- IDS/IPS Setup
 - ACL setup
 - Monit settings
 - Firewall Rules
