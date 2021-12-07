@@ -198,10 +198,3 @@ Now we have enabled the IPS service, downloaded rulesets and enables policies. N
 ### Viewing logs
 
 After some time of running intrusion detection, you may navigate to "Services > Intrusion Detection > Administration" and check the “Alerts” tab to see the activity that is occurring on your network.
-
-
-
-# ToDo
-- ACL setup
-- Monit settings
-- Firewall Rules
